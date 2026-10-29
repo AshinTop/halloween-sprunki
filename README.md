@@ -1,129 +1,116 @@
-# Halloween Music Maker — Pumpkin Jam
+[English](README.md) · [简体中文](README.zh-CN.md) · [Español](README.es.md) · [Português (Brasil)](README.pt-BR.md) · [日本語](README.ja.md)
 
-**Build a little monster band. Find a secret sound. Make the night your own.**
+# Pumpkin Jam — Halloween Music Maker and Memory Game
 
-Pumpkin Jam is an original Halloween music game and browser music maker. Choose a pumpkin drummer, a bubbling bass player, a music-box melody, and a ghostly voice, then combine them into a looping arrangement. Every layer shares a 96 BPM C-minor musical palette, and changes enter together on the next bar so experimenting stays musical.
+🎃 Give the pumpkin drummer a ghostly band. Pumpkin Jam is an original browser music maker with warm drums, bubbling bass, candy-bell melodies, and moonlit voices. Pick your performers, start the loop, and discover how four small parts change the whole night.
 
-Part of **Midnight Candy Club**, created for the Halloween collection at [sprunki-game.top](https://sprunki-game.top). The characters, visuals, and browser-synthesized sounds are original to this project. This repository is **not a modified third-party Sprunki game**.
+**[Play online](https://halloween-sprunki.crazy3d.org/)** · [Explore all 12 Halloween games](https://github.com/AshinTop/halloween-games) · [⭐ Star this repository](https://github.com/AshinTop/halloween-sprunki)
 
-**[Play online](https://halloween-sprunki.crazy3d.org/)** · **[Watch the visual introduction](docs/media/intro.mp4)** · **[Embedding guide](EMBEDDING.md)**
+README translations cover five languages. The **game interface currently supports English and Simplified Chinese only**.
 
-**Live deployment:** Play on Cloudflare using the link above. The site is deployed from this GitHub repository. Hosting scripts and request logging may be added by Cloudflare independently of the game code.
+![Pumpkin Jam Halloween music maker with four monster performers, sound choices, and playback controls](docs/images/gameplay.jpg)
 
-[Video player and transcript](https://halloween-sprunki.crazy3d.org/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
+## What makes it special
 
-![Pumpkin Jam Halloween music maker with four monster performers, instrument choices, and playback controls](docs/images/gameplay.jpg)
+- Four musical roles—beat, bass, melody, and voice—with two original performers each.
+- Three presets, three secret ensembles, and changes synchronized to the next bar.
+- Mute, solo, remove, and master volume controls for exploring each part.
+- Ghost Echo: five rounds of musical memory with four notes and no time pressure.
+- Original SVG characters and Web Audio instruments, shareable mixes, and reduced-motion support.
 
-## Features
+## How to play
 
-- **Four musical roles:** beat, bass, melody, and voice.
-- **Eight original monster performers**, with two sound variations for each role.
-- **Bar-synchronized changes:** a new character joins on the next 16-step bar while the band is playing.
-- **Three ready-made presets** for quick starts and **three hidden ensemble combinations** to discover.
-- **Per-track mute, solo, remove, and master volume** so you can hear how each part changes the arrangement.
-- **Ghost Echo**, a five-round musical memory game using four notes and the same friendly characters.
-- **Shareable arrangements** that restore the four character choices and mute settings from a link.
-- **English and Simplified Chinese**, desktop drag-and-drop, touch-friendly selection, optional audio, and reduced-motion support.
-- **Local saved progress** for arrangements, discovered ensembles, and Ghost Echo achievements.
-- **No account, backend, third-party iframe, external music file, or runtime CDN dependency.**
+Choose a character for each role, or select a preset. Press **Start** to hear the band; browsers need this interaction before audio begins. Tap a new character to replace that role. On desktop, you can also drag a character onto its matching stage. A bass performer cannot fill the melody role.
 
-## How to make a Halloween mix
+All parts share **96 BPM, C minor, and a 16-step bar**. During playback, changes wait for the next bar boundary, so a queued performer may take a moment to join. Mute hides one part, Solo isolates it, and Remove clears its slot.
 
-1. Choose a performer for each of the four roles, or start with a preset.
-2. Press **Start** to begin the band. The browser creates the audio only after your interaction.
-3. Swap a character while the band plays. The change is queued and arrives at the next bar boundary.
-4. Mute a role, solo a performer, or remove a part to hear the arrangement differently.
-5. Discover hidden combinations, then share a link to your mix.
+### Try Ghost Echo
 
-On desktop, a performer can be dragged into its matching role. On a phone, tap the character directly. A beat character belongs in the beat role, a bass character in bass, and so on.
+Press **Listen**, remember the characters’ notes, then repeat them in order using four pads. The five rounds grow from three notes to seven. A wrong note lets you listen and retry. Opening Echo pauses the band; leaving the page pauses playback and cancels the pending listening sequence. Press Start or Listen deliberately when you return.
 
-### Ghost Echo
-
-Open **Ghost Echo**, press Listen, and watch the characters play a short sequence. When it becomes your turn, repeat the sequence with the four note buttons. There are five rounds, beginning with three notes and growing to seven. An incorrect note lets you listen and try again.
-
-### Controls
+## Controls
 
 | Action | Input |
 | --- | --- |
-| Choose a character | Click or tap its card; desktop drag-and-drop is also supported |
-| Start or pause the band | Playback button; **Space** when a form control or dialog is not active |
-| Mute, solo, remove | The corresponding performer controls |
-| Change master volume | Volume slider |
-| Play Ghost Echo notes | Four on-screen pads or **1–4** |
-| Share a mix | Share button, then copy the generated link |
+| Choose a performer | Click / tap a card; desktop drag to the matching role |
+| Play or pause | Playback button; **Space** outside controls and dialogs |
+| Adjust parts | Performer **Mute**, **Solo**, and remove buttons |
+| Change volume | Master volume slider |
+| Repeat Echo notes | Four pads or **1–4**, during your turn |
+| Share an arrangement | Share, then copy the displayed link |
 
-## Share your arrangement
+## A little strategy
 
-A link such as `#mix=v1-1010-0000` describes the arrangement and track mute states. It restores the configuration without uploading audio or starting playback for the recipient. Solo is a listening tool and is not encoded in the shared mix.
+Begin with beat and bass, then add melody and voice one at a time. Use Solo to hear a part clearly, then restore the ensemble. Secret combinations are discovered while the complete matching band is playing audibly: unmute every role, turn Solo off, and let the next bar begin.
 
-Saved arrangements and achievements stay in the current browser. The game continues to work when browser storage is blocked. It does not require sign-in or send mixes to a server.
+## Progress and challenge links
 
-## Audio and technical design
+Arrangements, mute settings, volume, language, discoveries, and Echo achievements are stored locally. Another browser has separate records. Storage being unavailable does not stop play.
 
-All instruments are synthesized with Web Audio: oscillators create drums, bass, bells, and voices, while a short generated noise buffer supplies percussion. A lookahead scheduler uses the `AudioContext` clock and an absolute musical timeline.
+An [example mix link](https://halloween-sprunki.crazy3d.org/#mix=v1-1010-0000) restores four performer choices and mute states. Solo is not included. The recipient presses Start to listen; a link neither uploads a recording nor starts sound automatically.
 
-The scheduler skips stale events after a long browser stall instead of playing an audio backlog. Leaving the page pauses the band and cancels pending Ghost Echo activity; returning requires an explicit Start or Listen action. This behavior keeps a hidden iframe from unexpectedly resuming sound.
+## Screenshots and video
 
-The musical palette is fixed at **96 BPM**, **C minor**, and **16 sixteenth-note steps per bar**. This is a compact creative instrument, rather than an audio recording workstation: it does not export WAV files, record microphones, or upload performances.
+![Pumpkin Jam in a compact iframe with instrument selection and Start controls](docs/images/mobile.jpg)
 
-## Run locally
+Actual game screenshot from a compact browser iframe; this demonstrates the small-window layout, not a physical-phone test.
+
+[Video player and transcript](https://halloween-sprunki.crazy3d.org/intro.html) · [Download the MP4](docs/media/intro.mp4)
+
+The **24-second silent introduction** combines actual screenshots and captions. It is a visual tour, not continuous gameplay footage or an audio demonstration.
+
+## Frequently asked questions
+
+### Is this a third-party Sprunki mod?
+
+No. Pumpkin Jam has its own characters, artwork, synthesized instruments, patterns, and code. It belongs to the same Halloween site collection.
+
+### Why is there no sound?
+
+Press Start, then check master volume, track mutes, device volume, and the browser’s sound permissions. Returning from a hidden page requires another Start or Listen action.
+
+### Can I record or export a song?
+
+This version shares an arrangement link. It does not record microphones, export WAV files, or upload performances.
+
+## Run locally and embed
+
+Serve the repository root over HTTP:
 
 ```sh
 python3 -m http.server 4173
 ```
 
-Open `http://localhost:4173/`. The project is buildless HTML, CSS and JavaScript modules; no dependency installation or build step is needed. Use HTTP so the browser can load the modules.
+Open **http://localhost:4173/**. No build or dependencies are needed. Use HTTP: `file://` can block JavaScript modules.
+
+Run the included Node checks:
 
 ```sh
 npm test
 ```
 
-The **12 focused tests** cover arrangement encoding and decoding, invalid share links, hidden-ensemble rules, musical event ranges, Ghost Echo checks, audio scheduling, long frozen-tab jumps, bar transitions, paused clocks, and asynchronous cancellation. The real audio class is exercised with simulated clocks. These checks do not measure actual acoustic delay or replace human listening on a physical device.
-
-## Compact-player walkthrough
-
-![Pumpkin Jam in a compact host iframe, with monster performers, sound choices and playback controls](docs/images/mobile.jpg)
-
-Tap a performer to place it in the matching musical role, then press Start. Changes made during playback enter on the next bar. Compact dialogs hold extra presets and instructions so the instruments keep their space.
-
-*Actual interface captured in a browser iframe sized for the host player. This is a compact-window illustration, not a physical-phone test.*
-
-## Embedding
-
-The game has a compact iframe surface and uses the iframe's own viewport. Audited host targets include **1160 × 654**, **390 × 794**, **390 × 650**, and **844 × 340** CSS pixels. The main site's toolbar should remain outside the game frame. See [EMBEDDING.md](EMBEDDING.md) for the complete host mapping and limitations.
+Checks cover mix links, ensemble rules, musical events, Echo sequences, and the actual audio scheduler with simulated clocks, including stalled tabs and cancellation. They do not measure physical-device audio latency or replace listening tests.
 
 ```html
 <iframe src="https://halloween-sprunki.crazy3d.org/?embed=1"
-  title="Pumpkin Jam" width="1160" height="654"
-  allow="autoplay; fullscreen" allowfullscreen
-  style="display:block;width:100%;border:0"></iframe>
+  title="Pumpkin Jam"
+  style="display:block;width:100%;height:654px;border:0"
+  allow="autoplay; fullscreen" allowfullscreen></iframe>
 ```
 
-Use a current browser with Web Audio and ES modules. Autoplay permissions do not force playback: the visitor must still press Start. Device volume, browser audio policy, and output-device latency can affect the listening experience.
+Browser layout checks covered **1160×654**, **390×794**, **390×650**, and **844×340**. Extra presets and instructions use compact dialogs. Web Audio and JavaScript modules are required. The iframe’s autoplay permission does not remove the visitor’s Start action; the game does not automatically resume sound after the page is hidden.
 
-## Frequently asked questions
+See [EMBEDDING.md](EMBEDDING.md) for sizing, storage, input focus, and permissions. Measure available iframe height after the host toolbar.
 
-**Is this a Sprunki mod?**  
-No. Pumpkin Jam has its own characters, artwork, synthesized instruments, and code. It is an original Halloween music maker in the same site collection.
+## More little Halloween adventures
 
-**Why does a character say it is queued?**  
-Changes join at the next bar boundary so the loop stays synchronized.
+- **[Midnight Rhythm Parade](https://halloween-rhythm-parade.crazy3d.org/)** · [Source](https://github.com/AshinTop/halloween-rhythm-parade) — Play three original songs in a four-lane rhythm game.
+- **[Ghost Lanterns 3D](https://halloween-3d.crazy3d.org/)** · [Source](https://github.com/AshinTop/halloween-3d) — Light a pumpkin garden with classic Lights Out logic and soul links.
+- **[Haunted Hearts](https://halloween-love-game.crazy3d.org/)** · [Source](https://github.com/AshinTop/halloween-love-game) — Help two ghosts share doors, paths, and a lantern.
+- **[Trick-or-Treat TriPeaks](https://halloween-tripeaks.crazy3d.org/)** · [Source](https://github.com/AshinTop/halloween-tripeaks) — Build adjacent-rank card chains across eight rescue deals.
 
-**Can I export a song?**  
-You can share the arrangement as a link. Audio-file export is not part of this version.
+## Credits and support
 
-**Why is there no sound yet?**  
-Press Start, check the master volume and track mute states, and confirm your device or browser is not muted.
+Created for **AshinTop** and **Midnight Candy Club** with human-directed, AI-assisted design, programming, and review. Artwork and synthesized sounds are original to this project. The game needs no remote account; hosting may independently add scripts or request logs.
 
-## Creation credits
-
-Created for Ashin's Midnight Candy Club with AI-assisted game design, programming, documentation, testing, and review. The original monster characters, SVG visuals, musical patterns, and Web Audio instruments were developed for this project. Screenshots and the captioned visual introduction show the actual interface; audio scheduling tests do not constitute a human acoustic evaluation.
-
-## More from Midnight Candy Club
-
-- [Midnight Rhythm Parade](https://halloween-rhythm-parade.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-rhythm-parade) — perform three original songs in a four-lane rhythm game.
-- [Ghost Lanterns 3D](https://halloween-3d.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-3d) — solve a moonlit Lights Out garden with linked-soul lanterns.
-- [Haunted Hearts](https://halloween-love-game.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-love-game) — help two ghosts open doors and bring their heart home.
-- [Trick-or-Treat TriPeaks](https://halloween-tripeaks.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-tripeaks) — take a thoughtful break with Halloween cards.
-
-Enjoy making a little monster music? **[Star this repository](https://github.com/AshinTop/halloween-sprunki)** to support Pumpkin Jam and keep it close for the next creative night. Bug reports with browser details and reproducible steps are welcome.
+Enjoyed playing? **[Leave a GitHub Star](https://github.com/AshinTop/halloween-sprunki)**. For bug reports, include browser, iframe size, challenge link, and reproduction steps.
