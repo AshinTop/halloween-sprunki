@@ -6,11 +6,11 @@ Pumpkin Jam is an original Halloween music game and browser music maker. Choose 
 
 Part of **Midnight Candy Club**, created for the Halloween collection at [sprunki-game.top](https://sprunki-game.top). The characters, visuals, and browser-synthesized sounds are original to this project. This repository is **not a modified third-party Sprunki game**.
 
-**[GitHub Pages deployment target](https://ashintop.github.io/halloween-sprunki/)** · **[Watch the visual introduction](docs/media/intro.mp4)** · **[Embedding guide](EMBEDDING.md)**
+**[Play online](https://halloween-sprunki.crazy3d.org/)** · **[Watch the visual introduction](docs/media/intro.mp4)** · **[Embedding guide](EMBEDDING.md)**
 
-**Deployment status:** GitHub Pages is not live yet. The `ashintop.github.io` links in this document are intended deployment addresses. Use the local-run instructions until the hosted game has been published and verified.
+**Live deployment:** Play on Cloudflare using the link above. The site is deployed from this GitHub repository. Hosting scripts and request logging may be added by Cloudflare independently of the game code.
 
-[Video player and transcript (deployment target)](https://ashintop.github.io/halloween-sprunki/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
+[Video player and transcript](https://halloween-sprunki.crazy3d.org/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
 
 ![Pumpkin Jam Halloween music maker with four monster performers, instrument choices, and playback controls](docs/images/gameplay.jpg)
 
@@ -93,7 +93,7 @@ Tap a performer to place it in the matching musical role, then press Start. Chan
 The game has a compact iframe surface and uses the iframe's own viewport. Audited host targets include **1160 × 654**, **390 × 794**, **390 × 650**, and **844 × 340** CSS pixels. The main site's toolbar should remain outside the game frame. See [EMBEDDING.md](EMBEDDING.md) for the complete host mapping and limitations.
 
 ```html
-<iframe src="https://ashintop.github.io/halloween-sprunki/?embed=1"
+<iframe src="https://halloween-sprunki.crazy3d.org/?embed=1"
   title="Pumpkin Jam" width="1160" height="654"
   allow="autoplay; fullscreen" allowfullscreen
   style="display:block;width:100%;border:0"></iframe>
@@ -121,9 +121,9 @@ Created for Ashin's Midnight Candy Club with AI-assisted game design, programmin
 
 ## More from Midnight Candy Club
 
-- [Midnight Rhythm Parade](https://github.com/AshinTop/halloween-rhythm-parade) — perform three original songs in a four-lane rhythm game.
-- [Ghost Lanterns 3D](https://github.com/AshinTop/halloween-3d) — solve a moonlit Lights Out garden with linked-soul lanterns.
-- [Haunted Hearts](https://github.com/AshinTop/halloween-love-game) — help two ghosts open doors and bring their heart home.
-- [Trick-or-Treat TriPeaks](https://github.com/AshinTop/halloween-tripeaks) — take a thoughtful break with Halloween cards.
+- [Midnight Rhythm Parade](https://halloween-rhythm-parade.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-rhythm-parade) — perform three original songs in a four-lane rhythm game.
+- [Ghost Lanterns 3D](https://halloween-3d.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-3d) — solve a moonlit Lights Out garden with linked-soul lanterns.
+- [Haunted Hearts](https://halloween-love-game.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-love-game) — help two ghosts open doors and bring their heart home.
+- [Trick-or-Treat TriPeaks](https://halloween-tripeaks.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-tripeaks) — take a thoughtful break with Halloween cards.
 
 Enjoy making a little monster music? **[Star this repository](https://github.com/AshinTop/halloween-sprunki)** to support Pumpkin Jam and keep it close for the next creative night. Bug reports with browser details and reproducible steps are welcome.

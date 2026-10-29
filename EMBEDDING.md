@@ -4,7 +4,7 @@ Serve this directory unchanged over HTTPS. `index.html` is the entry point; rela
 
 ```html
 <iframe
-  src="/halloween/pumpkin-jam/index.html?embed=1"
+  src="https://halloween-sprunki.crazy3d.org/?embed=1"
   title="Pumpkin Jam — Halloween music game"
   allow="autoplay; clipboard-write"
   style="display:block;width:100%;height:654px;border:0"
